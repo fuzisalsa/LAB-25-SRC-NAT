@@ -1,7 +1,7 @@
 # LAB-25-SRC-NAT
 tanggal 17 Agustus 2025
 
-![m]()
+![m](NTTTTT.PNG)
 
 # Langkah Konfigurasi Firewall Chain Forward SRC-NAT di Mikrotik (tanpa MASQUERADE)
 
