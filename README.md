@@ -6,7 +6,7 @@ tanggal 17 Agustus 2025
 # Langkah Konfigurasi Firewall Chain Forward SRC-NAT di Mikrotik (tanpa MASQUERADE)
 1. konfigurasi DHCP-Client
 
-   ip dhcp-client add interface=ether1 use-peer-dns=yes use-peer-ntp=yes add-default-route=yes disabled=no
+    /ip dhcp-client add interface=ether1 use-peer-dns=yes use-peer-ntp=yes add-default-route=yes disabled=no
 
 2. Konfigurasi IP Address di Mikrotik.   
    
