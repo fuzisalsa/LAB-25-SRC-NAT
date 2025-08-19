@@ -29,14 +29,14 @@ tanggal 17 Agustus 2025
 4. Buat aturan SRC-NAT (tanpa MASQUERADE, tapi menggunakan action=src-nat).  
 
    ```
-   /ip firewall nat add chain=srcnat out-interface=eth1 action=src-nat to-addresses=192.168.87.1
+   /ip firewall nat add chain=srcnat out-interface=eth1 action=src-nat to-addresses=192.168.87.28
    ```
-
+5. Set filter firewall, agar client boleh lewat ke internet.
    **Penjelasan**:    
 
      - `chain=srcnat`-> untuk mengubah source address dari LAN.   
      - `out-interface=eth1` -> lalu lintas keluar lewat internet.     
-     - `to-addresses=202.1.1.2` -> IP publik Mikrotik di eth1.    
+     - `to-addresses=192.168.87.1` -> IP publik Mikrotik di eth1.    
        
 5. Setting Otomatis (DHCP Server di Mikrotik)        
 
@@ -53,9 +53,14 @@ tanggal 17 Agustus 2025
 
    * Ping dari PC/Laptop ke internet (`ping 8.8.8.8`)
 
-![m]()
+![m](we1.PNG)
+
+   * serc google.com
+
+![m](we2.PNG)
 
 # Kesimpulan     
 
 SRC-NAT berfungsi untuk mengganti alamat IP private dari client menjadi alamat    
-IP publik router agar bisa terhubung ke internet.  
+IP publik router agar bisa terhubung ke internet. Selain menggunakan metode masquerade,   
+akses internet pada client tetap dapat berfungsi dengan baik dengan menerapkan metode src-nat.    
